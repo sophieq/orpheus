@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import ScriptingBridge
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -14,19 +15,35 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
     let popover = NSPopover()
     var eventMonitor: EventMonitor?
-
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         if let button = statusItem.button {
             button.image = NSImage(named: NSImage.Name("StatusBarButtonImage"))
             button.action = #selector(togglePopover(_:))
         }
-        popover.contentViewController = PlayerViewController()
+        
+        let playViewController = PlayerViewController(currentTrack: SongTrack(title: "Title", artist: "Artist"))
+        popover.contentViewController = playViewController
         
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
             if let strongSelf = self,
                 strongSelf.popover.isShown {
                 strongSelf.closePopover(sender: event)
             }
+        }
+        
+        let spotifyApp = SBApplication(bundleIdentifier: "com.spotify.client")
+        
+        if let _ = spotifyApp?.isRunning {
+            let notificationCenter = DistributedNotificationCenter.default()
+            notificationCenter.addObserver(
+                playViewController,
+                selector: #selector(playViewController.updateSongTrack(_:)),
+                name: NSNotification.Name(rawValue: "com.spotify.client.PlaybackStateChanged"),
+                object: nil
+            )
+        } else {
+            // default screen
         }
     }
 

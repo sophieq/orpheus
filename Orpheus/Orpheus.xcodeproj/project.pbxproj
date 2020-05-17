@@ -13,11 +13,8 @@
 		AD26E39C246E07A7009194DD /* OrpheusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD26E39B246E07A7009194DD /* OrpheusTests.swift */; };
 		AD26E3A7246E07A7009194DD /* OrpheusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD26E3A6246E07A7009194DD /* OrpheusUITests.swift */; };
 		AD26E3B6246E0815009194DD /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD26E3B4246E0815009194DD /* PlayerViewController.swift */; };
-		AD26E3B7246E0815009194DD /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD26E3B5246E0815009194DD /* PlayerViewController.xib */; };
-		AD26E3B9246E0847009194DD /* StatusBarButtonImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD26E3B8246E0847009194DD /* StatusBarButtonImage@2x.png */; };
-		AD26E3BB246E0CB1009194DD /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD26E3BA246E0CB1009194DD /* Song.swift */; };
 		AD26E3BD246E0ED9009194DD /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD26E3BC246E0ED9009194DD /* EventMonitor.swift */; };
-		AD26E3BF246E32E1009194DD /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD26E3BE246E32E1009194DD /* SpotifyiOS.framework */; };
+		ADFA01CE2470FDF9009EC7F1 /* SongTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFA01CD2470FDF9009EC7F1 /* SongTrack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,12 +48,8 @@
 		AD26E3A6246E07A7009194DD /* OrpheusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrpheusUITests.swift; sourceTree = "<group>"; };
 		AD26E3A8246E07A7009194DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD26E3B4246E0815009194DD /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
-		AD26E3B5246E0815009194DD /* PlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
-		AD26E3B8246E0847009194DD /* StatusBarButtonImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StatusBarButtonImage@2x.png"; sourceTree = "<group>"; };
-		AD26E3BA246E0CB1009194DD /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		AD26E3BC246E0ED9009194DD /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
-		AD26E3BE246E32E1009194DD /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
-		AD26E3C0246E3755009194DD /* Orpheus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Orpheus-Bridging-Header.h"; sourceTree = "<group>"; };
+		ADFA01CD2470FDF9009EC7F1 /* SongTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTrack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +57,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD26E3BF246E32E1009194DD /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +84,6 @@
 				AD26E39A246E07A7009194DD /* OrpheusTests */,
 				AD26E3A5246E07A7009194DD /* OrpheusUITests */,
 				AD26E388246E07A5009194DD /* Products */,
-				AD26E3BE246E32E1009194DD /* SpotifyiOS.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,16 +101,13 @@
 			isa = PBXGroup;
 			children = (
 				AD26E38A246E07A5009194DD /* AppDelegate.swift */,
-				AD26E3B8246E0847009194DD /* StatusBarButtonImage@2x.png */,
 				AD26E38C246E07A7009194DD /* Assets.xcassets */,
 				AD26E38E246E07A7009194DD /* MainMenu.xib */,
 				AD26E391246E07A7009194DD /* Info.plist */,
 				AD26E392246E07A7009194DD /* Orpheus.entitlements */,
 				AD26E3B4246E0815009194DD /* PlayerViewController.swift */,
-				AD26E3B5246E0815009194DD /* PlayerViewController.xib */,
-				AD26E3BA246E0CB1009194DD /* Song.swift */,
 				AD26E3BC246E0ED9009194DD /* EventMonitor.swift */,
-				AD26E3C0246E3755009194DD /* Orpheus-Bridging-Header.h */,
+				ADFA01CD2470FDF9009EC7F1 /* SongTrack.swift */,
 			);
 			path = Orpheus;
 			sourceTree = "<group>";
@@ -246,10 +234,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD26E3B9246E0847009194DD /* StatusBarButtonImage@2x.png in Resources */,
 				AD26E38D246E07A7009194DD /* Assets.xcassets in Resources */,
 				AD26E390246E07A7009194DD /* MainMenu.xib in Resources */,
-				AD26E3B7246E0815009194DD /* PlayerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,9 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD26E3BB246E0CB1009194DD /* Song.swift in Sources */,
 				AD26E38B246E07A5009194DD /* AppDelegate.swift in Sources */,
 				AD26E3B6246E0815009194DD /* PlayerViewController.swift in Sources */,
+				ADFA01CE2470FDF9009EC7F1 /* SongTrack.swift in Sources */,
 				AD26E3BD246E0ED9009194DD /* EventMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,10 +441,9 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sophieqin.Orpheus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Orpheus-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -479,10 +464,9 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sophieqin.Orpheus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Orpheus-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
