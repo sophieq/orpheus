@@ -14,6 +14,7 @@
 		AD26E3A7246E07A7009194DD /* OrpheusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD26E3A6246E07A7009194DD /* OrpheusUITests.swift */; };
 		AD26E3B6246E0815009194DD /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD26E3B4246E0815009194DD /* PlayerViewController.swift */; };
 		AD26E3BD246E0ED9009194DD /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD26E3BC246E0ED9009194DD /* EventMonitor.swift */; };
+		AD350D5C247A2D9000D34319 /* Scripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD350D5B247A2D9000D34319 /* Scripts.swift */; };
 		ADFA01CE2470FDF9009EC7F1 /* SongTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFA01CD2470FDF9009EC7F1 /* SongTrack.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		AD26E3A8246E07A7009194DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD26E3B4246E0815009194DD /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		AD26E3BC246E0ED9009194DD /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		AD350D5B247A2D9000D34319 /* Scripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scripts.swift; sourceTree = "<group>"; };
 		ADFA01CD2470FDF9009EC7F1 /* SongTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTrack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,14 +102,14 @@
 		AD26E389246E07A5009194DD /* Orpheus */ = {
 			isa = PBXGroup;
 			children = (
+				ADE7214E247A51D30012AF12 /* Models */,
+				AD350D5D247A2D9500D34319 /* Utils */,
 				AD26E38A246E07A5009194DD /* AppDelegate.swift */,
 				AD26E38C246E07A7009194DD /* Assets.xcassets */,
 				AD26E38E246E07A7009194DD /* MainMenu.xib */,
 				AD26E391246E07A7009194DD /* Info.plist */,
 				AD26E392246E07A7009194DD /* Orpheus.entitlements */,
 				AD26E3B4246E0815009194DD /* PlayerViewController.swift */,
-				AD26E3BC246E0ED9009194DD /* EventMonitor.swift */,
-				ADFA01CD2470FDF9009EC7F1 /* SongTrack.swift */,
 			);
 			path = Orpheus;
 			sourceTree = "<group>";
@@ -128,6 +130,23 @@
 				AD26E3A8246E07A7009194DD /* Info.plist */,
 			);
 			path = OrpheusUITests;
+			sourceTree = "<group>";
+		};
+		AD350D5D247A2D9500D34319 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AD350D5B247A2D9000D34319 /* Scripts.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		ADE7214E247A51D30012AF12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD26E3BC246E0ED9009194DD /* EventMonitor.swift */,
+				ADFA01CD2470FDF9009EC7F1 /* SongTrack.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +217,11 @@
 				TargetAttributes = {
 					AD26E386246E07A5009194DD = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					AD26E396246E07A7009194DD = {
 						CreatedOnToolsVersion = 10.3;
@@ -264,6 +288,7 @@
 				AD26E3B6246E0815009194DD /* PlayerViewController.swift in Sources */,
 				ADFA01CE2470FDF9009EC7F1 /* SongTrack.swift in Sources */,
 				AD26E3BD246E0ED9009194DD /* EventMonitor.swift in Sources */,
+				AD350D5C247A2D9000D34319 /* Scripts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,7 +454,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Orpheus/Orpheus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -452,7 +476,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Orpheus/Orpheus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (

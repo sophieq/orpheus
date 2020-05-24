@@ -11,4 +11,6 @@ import Foundation
 struct SongTrack {
     let title: String
     let artist: String
+    let album: String
+    let albumUrl: String
 }

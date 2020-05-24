@@ -72,6 +72,16 @@ class PlayerViewController: NSViewController {
         
         print("userInfo: ", notification?.userInfo ?? "")
         
+        let script = "tell application \"Spotify\" to return name of current track"
+        var error: NSDictionary?
+        if let scriptObject = NSAppleScript(source: script) {
+            if let outputString = scriptObject.executeAndReturnError(&error).stringValue {
+                print(outputString)
+            } else if (error != nil) {
+                print("error: ", error!)
+            }
+        }
+        
         guard let notification = notification,
             let dict = notification.userInfo,
         let title = dict["Name"] as? String,

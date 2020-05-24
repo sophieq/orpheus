@@ -22,7 +22,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.action = #selector(togglePopover(_:))
         }
         
-        let playViewController = PlayerViewController(currentTrack: SongTrack(title: "Title", artist: "Artist"))
+        // get current track
+        let title = Scripts.getTitle.runScript()
+        let artist = Scripts.getAlbum.runScript()
+        let album = Scripts.getAlbum.runScript()
+        let albumUrl = Scripts.getAlbumArtwork.runScript()
+        
+        let currentTrack = SongTrack(
+            title: title,
+            artist: artist,
+            album: album,
+            albumUrl: albumUrl
+        )
+        
+        let playViewController = PlayerViewController(currentTrack: currentTrack)
         popover.contentViewController = playViewController
         
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
